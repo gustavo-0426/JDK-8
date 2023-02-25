@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -46,7 +47,7 @@ public class MapApp {
         log.info("collect...");
         Map<Integer, String> result = map.entrySet().stream()
                 .filter(x -> x.getValue().toLowerCase().startsWith("f"))
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+                .collect(Collectors.toMap(Entry::getKey, Entry::getValue));
         result.entrySet().forEach( entry -> log.info(String.valueOf(entry)));
     }
 

@@ -4,7 +4,7 @@ import com.co.softworld.java8.functionalinterface.IFunctionalInterface;
 import com.co.softworld.java8.functionalinterface.IFunctionalInterfaceBuilder;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Arrays;
+import static java.util.Arrays.asList;
 import java.util.List;
 
 @Slf4j
@@ -12,7 +12,7 @@ public class ReferenceMethodApp {
 
     public void referenceMethodObject() {
         log.info("referenceMethodObject...");
-        List<String> list = Arrays.asList("Martin", "Gustavo", "Maye");
+        List<String> list = asList("Martin", "Gustavo", "Maye");
         /**
          ** this is the reference to method object
          **/

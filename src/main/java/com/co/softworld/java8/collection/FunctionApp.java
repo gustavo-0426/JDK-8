@@ -3,12 +3,12 @@ package com.co.softworld.java8.collection;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import static java.util.Arrays.asList;
 import java.util.List;
 @Slf4j
 public class FunctionApp {
 
-    static List<String> list = new ArrayList<>(Arrays.asList("Gustavo", "Maye", "Martin"));
+    static List<String> list = new ArrayList<>(asList("Gustavo", "Maye", "Martin"));
 
     public void forEach(List<String> list) {
         log.info("forEach...");

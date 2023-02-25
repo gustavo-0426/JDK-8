@@ -42,8 +42,8 @@ public class HighOrderApp {
 
     public static void main(String[] args) {
         HighOrderApp highOrderApp = new HighOrderApp();
-        log.info(highOrderApp.converterToUpperCase(highOrderApp.converterToUpperCase, "Hello"));
-        log.info(highOrderApp.converterToUpperCase(highOrderApp.converterToLowerCase, "Welcome"));
+        log.info(highOrderApp.converter(highOrderApp.converterToUpperCase, "Hello"));
+        log.info(highOrderApp.converter(highOrderApp.converterToLowerCase, "Welcome"));
         log.info(highOrderApp.show("Function").apply(1));
 
         List<String> names = new ArrayList<>(Arrays.asList("Gustavo", "Martin", "Maye"));
@@ -51,7 +51,7 @@ public class HighOrderApp {
         highOrderApp.filter2(names, "ma", log::info);
     }
 
-    private String converterToUpperCase(Function<String, String> function, String msg) {
+    private String converter(Function<String, String> function, String msg) {
         return function.apply(msg);
     }
 
