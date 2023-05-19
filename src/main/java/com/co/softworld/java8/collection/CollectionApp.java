@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import static java.util.Arrays.asList;
 import java.util.List;
 @Slf4j
-public class FunctionApp {
+public class CollectionApp {
 
     static List<String> list = new ArrayList<>(asList("Gustavo", "Maye", "Martin"));
 
@@ -27,9 +27,9 @@ public class FunctionApp {
     }
 
     public static void main(String[] args) {
-        FunctionApp functionApp = new FunctionApp();
-        functionApp.forEach(list);
-        functionApp.sort(list);
-        functionApp.removeIf(list);
+        CollectionApp collectionApp = new CollectionApp();
+        collectionApp.forEach(list);
+        collectionApp.sort(list);
+        collectionApp.removeIf(list);
     }
 }
